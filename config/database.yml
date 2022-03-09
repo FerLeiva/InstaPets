@@ -82,5 +82,5 @@ test:
 production:
   <<: *default
   database: InstaPets_production
-  username: InstaPets
-  password: <%= ENV["INSTAPETS_DATABASE_PASSWORD"] %>
+  username: effeleiva
+  password: Kattito2020
