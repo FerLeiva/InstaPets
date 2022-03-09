@@ -6,10 +6,6 @@ RSpec.describe "Welcomes", type: :request do
       get "/welcome/index"
       expect(response).to have_http_status(:success)
     end
-    it "renders the index template" do
-      get "/welcome/index"
-      expect(response).to render_template("index")
-    end
   end
 
 end
