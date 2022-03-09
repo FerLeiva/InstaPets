@@ -1,25 +1,17 @@
-class AdminUser < ApplicationRecord
+class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-  devise :database_authenticatable, 
+  devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  after_create { |admin| admin.send_reset_password_instructions }
-
-  def password_required?
-    new_record? ? false : super
-  end
-
-  def to_s
-    self.email
-  end
-
+  has_many :photos
 end
 # == Schema Information
 #
-# Table name: admin_users
+# Table name: users
 #
 #  id                     :integer(8)      not null, primary key
+#  name                   :string          not null
 #  email                  :string          default(""), not null
 #  encrypted_password     :string          default(""), not null
 #  reset_password_token   :string
