@@ -4,7 +4,10 @@
 <% if @photos.any? %>
 	<h2>Latest uploaded photos</h2>
 	<% @photos.each do |photo| %>
-		<img src=<%= photo.url %> alt=<%= photo.name %> height='150'>
+
+		<%= link_to photo_detail_path(photo) do %>
+			<img src=<%= photo.url %> alt=<%= photo.name %> height='150'>
+		<% end %>
 	<% end %>
 <% else %>
 	<p>Be the first one to submit a pic!</p>
