@@ -51,7 +51,6 @@ gem "activeadmin", github: "activeadmin/activeadmin"
 gem "inherited_resources", github: "activeadmin/inherited_resources"
 gem "devise"
 gem "sass-rails"
-gem 'gemoji'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
