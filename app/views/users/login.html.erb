@@ -1,11 +1,5 @@
-<form method="post">
-	<div>
-		<input type="text" name="email" placeholder="Itroduce your email">
-	</div>
-	<div>
-		<input type="password" name="password" placeholder="Itroduce your password">
-	</div>
-	<div>
-		<button>Login</button>
-	</div>
-</form>
+<%= form_for @user, url: {action: 'new_session'} do |f| %>
+ <%= f.text_field(:email) %><br><br>
+ <%= f.password_field(:password) %><br><br>
+ <%= f.submit 'Login' %>
+<% end %>

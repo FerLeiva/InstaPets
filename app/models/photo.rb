@@ -6,6 +6,9 @@ class Photo < ApplicationRecord
 	validates :license, inclusion: { in: Photo.licenses }
 	validates :visibility, inclusion: { in: Photo.visibilities }
 
+	validates_with PhotoValidator
+
+
 	belongs_to :user
 
 end

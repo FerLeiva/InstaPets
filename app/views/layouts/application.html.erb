@@ -21,9 +21,10 @@
       <nav>
         <%= link_to 'Home', welcome_home_path %>
         <% if user_signed_in? %>
-          <%= link_to 'Logout', logout_path %>
+          <%= link_to 'Upload a photo', photo_new_path %>
+          <%= button_to 'Logout', destroy_user_session_path, :method => :delete %>
           <% else %>
-          <%= link_to 'Login', login_path %>
+          <%= link_to 'Login', new_user_session_path %>
         <%end%>
       </nav>
     </section>
@@ -39,7 +40,7 @@
     <hr>
     
     <section>
-      <small>InstaPets Inc ~copy; All rights reserved</small>
+      <small>InstaPets Inc &copy; All rights reserved</small>
     </section>
   </body>
 </html>
