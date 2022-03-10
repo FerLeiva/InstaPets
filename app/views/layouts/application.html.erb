@@ -19,7 +19,12 @@
   <body>
     <section>
       <nav>
-        <%= link_to 'Inicio', welcome_home_path %>
+        <%= link_to 'Home', welcome_home_path %>
+        <% if user_signed_in? %>
+          <%= link_to 'Logout', logout_path %>
+          <% else %>
+          <%= link_to 'Login', login_path %>
+        <%end%>
       </nav>
     </section>
 
