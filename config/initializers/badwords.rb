@@ -1,0 +1,1 @@
+BADWORDS = ['Puta', 'Puto', 'Trolo', 'Idiota', 'Pelotudo', 'Boludo']
