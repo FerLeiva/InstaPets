@@ -13,7 +13,7 @@ ActiveAdmin.register Photo do
     column :name
     column :description
     column :url
-    column "Propietario", :user
+    column :user
     column :license
     column :visibility
     actions
