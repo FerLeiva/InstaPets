@@ -20,10 +20,10 @@ class PhotosController < ApplicationController
     @photo = Photo.create(photo_params)
     @photo.user = current_user
     if @photo.save
-      redirect_to photo_detail_path(@photo), notice: 'Photo uploaded successfully'
+      redirect_to photo_path(@photo), notice: 'Photo uploaded successfully'
     else
       flash[:alert] = 'There was an error uploading your photo: '+ @photo.errors.full_messages.to_sentence
-      redirect_to photo_new_path
+       redirect_to :new_photo
     end
   end
 
@@ -52,7 +52,7 @@ class PhotosController < ApplicationController
       render file: "#{Rails.root}/public/404.html", status: :not_found #404
     elsif @photo.update(photo_params)
       flash[:notice] = "Your photo '#{@photo.name}' has been updated successfully"
-      redirect_to photo_detail_path(@photo)
+      redirect_to photo_path(@photo)
     else
       flash[:alert] = "There has been an error updating your photo '#{@photo.name}'"
       render :edit

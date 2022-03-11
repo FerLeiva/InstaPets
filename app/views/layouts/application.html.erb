@@ -21,10 +21,10 @@
     <section>
       <nav>
         <%= link_to 'Home', welcome_home_path %>
-         <%= link_to 'Photo list', photos_index_path %>
+         <%= link_to 'Photo list', photos_path %>
         <% if user_signed_in? %>
           <%= link_to 'My photos', my_photos_path %>
-          <%= link_to 'Upload a photo', photo_new_path %>
+          <%= link_to 'Upload a photo', new_photo_path %>
           <%= button_to 'Logout', destroy_user_session_path, :method => :delete %>
           <% else %>
           <%= link_to 'Login', new_user_session_path %>
