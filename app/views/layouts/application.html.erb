@@ -13,6 +13,7 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application" %>
     <%= javascript_importmap_tags %>
   </head>
 
@@ -20,7 +21,9 @@
     <section>
       <nav>
         <%= link_to 'Home', welcome_home_path %>
+         <%= link_to 'Photo list', photos_index_path %>
         <% if user_signed_in? %>
+          <%= link_to 'My photos', my_photos_path %>
           <%= link_to 'Upload a photo', photo_new_path %>
           <%= button_to 'Logout', destroy_user_session_path, :method => :delete %>
           <% else %>

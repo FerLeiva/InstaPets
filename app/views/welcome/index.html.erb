@@ -3,12 +3,7 @@
 
 <% if @photos.any? %>
 	<h2>Latest uploaded photos</h2>
-	<% @photos.each do |photo| %>
-
-		<%= link_to photo_detail_path(photo) do %>
-			<img src=<%= photo.url %> alt=<%= photo.name %> height='150'>
-		<% end %>
-	<% end %>
+	<%= render partial: 'photos/photos_loop', object: @photos %>
 <% else %>
 	<p>Be the first one to submit a pic!</p>
 <% end %>

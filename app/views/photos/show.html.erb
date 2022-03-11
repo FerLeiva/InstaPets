@@ -11,3 +11,9 @@
 
 <h2> Author: </h2>
 <p> <%= @photo.user.email %> </p>
+
+<br> <br>
+<% if @photo.user == current_user %>
+	<%= link_to 'Edit', photo_edit_path %>
+	<%= button_to 'Delete', photo_destroy_path, method: :delete, :onclick => "return confirm('Are you sure you want to delete this photo?')" %>
+<% end %>
