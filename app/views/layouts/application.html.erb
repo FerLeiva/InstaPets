@@ -18,7 +18,8 @@
   </head>
 
   <body>
-    <section>
+    <section class="container">
+      <section>
       <nav>
         <%= link_to 'Home', welcome_home_path %>
          <%= link_to 'Photo list', photos_path %>
@@ -35,8 +36,12 @@
     <hr>
     
     <section>
-      <p class="notice"> <%= notice %> </p>
-      <p class="alert"> <%= alert %> </p>
+      <% if flash[:notice] %>
+        <p class="notice"> <%= notice %> </p>
+      <%end%>
+      <% if flash[:notice] %>
+        <p class="alert"> <%= alert %> </p>
+      <%end%>
       <%= yield %>
     </section>
     
@@ -45,5 +50,8 @@
     <section>
       <small>InstaPets Inc &copy; All rights reserved</small>
     </section>
+    </section>
+
+    
   </body>
 </html>
