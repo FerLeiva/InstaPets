@@ -51,6 +51,9 @@ gem "activeadmin", github: "activeadmin/activeadmin"
 gem "inherited_resources", github: "activeadmin/inherited_resources"
 gem "devise"
 gem "sass-rails"
+# User bootstrap - styling
+gem 'bootstrap'
+gem "autoprefixer-rails"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -66,6 +69,7 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
+  # User annotate - documentation
   gem 'annotate', '2.4.1.beta1'
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
