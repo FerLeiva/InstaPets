@@ -5,6 +5,21 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :photos
+
+
+  # Assign an API key when creating an user
+  before_create do |user|
+    user.api_key = user.generate_api_key
+  end
+
+  # Generate an unique API key
+  def generate_api_key
+    loop do
+      token = Devise.friendly_token
+      break token unless User.where(api_key: token).first
+    end
+  end
+  
 end
 # == Schema Information
 #
