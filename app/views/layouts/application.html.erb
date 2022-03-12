@@ -1,16 +1,57 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>InstaPets</title>
+    <title>
+      <% if content_for?(:title) %>
+        <%= yield :title %>
+      <% else %>
+        Welcome to InstaPets 
+      <%end%>
+    </title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application" %>
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
-    <%= yield %>
+    <section class="container">
+      <section>
+      <nav>
+        <%= link_to 'Home', welcome_home_path %>
+         <%= link_to 'Photo list', photos_path %>
+        <% if user_signed_in? %>
+          <%= link_to 'My photos', my_photos_path %>
+          <%= link_to 'Upload a photo', new_photo_path %>
+          <%= button_to 'Logout', destroy_user_session_path, :method => :delete %>
+          <% else %>
+          <%= link_to 'Login', new_user_session_path %>
+        <%end%>
+      </nav>
+    </section>
+
+    <hr>
+    
+    <section>
+      <% if flash[:notice] %>
+        <p class="notice"> <%= notice %> </p>
+      <%end%>
+      <% if flash[:notice] %>
+        <p class="alert"> <%= alert %> </p>
+      <%end%>
+      <%= yield %>
+    </section>
+    
+    <hr>
+    
+    <section>
+      <small>InstaPets Inc &copy; All rights reserved</small>
+    </section>
+    </section>
+
+    
   </body>
 </html>

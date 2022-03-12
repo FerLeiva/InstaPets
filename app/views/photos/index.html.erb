@@ -1,0 +1,5 @@
+<% content_for :title do %> A list of photos <% end %>
+
+<h1>List of photos</h1>
+
+<%= render partial: 'photos_loop', object: @photos %>
