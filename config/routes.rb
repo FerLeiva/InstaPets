@@ -14,6 +14,14 @@ Rails.application.routes.draw do
   # Welcom Controller
   get 'welcome/index', to: 'welcome#index', as: 'welcome_home'
 
+  # API
+  namespace :api do 
+    namespace :v1 do
+      resources :users, except: [:new, :edit]
+      resources :photos, except: [:new, :edit]
+    end
+  end
+
   # Users Controller
   #get 'login', to: 'users#login', as: 'login'
   ##post 'login', to:'users#new_session', as:'user_new_session'
