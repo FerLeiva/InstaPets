@@ -31,3 +31,14 @@
 
 en:
   hello: "Hello world"
+
+  photos:
+    my_photos:
+      title: 'My photos'
+
+    index:
+      title: 'List of photos'
+
+    show:
+      description: 'About this'
+      user: 'Author'

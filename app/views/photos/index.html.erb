@@ -1,5 +1,5 @@
-<% content_for :title do %> A list of photos <% end %>
-
-<h1>List of photos</h1>
-
-<%= render partial: 'photos_loop', object: @photos %>
+<div class="px-3 py-2 my-4 text-center">
+	<% content_for :title do %> A list of photos <% end %>
+	<h1> <%= t('.title') %> </h1>
+	<%= render partial: 'photos_loop', object: @photos %>
+</div>
