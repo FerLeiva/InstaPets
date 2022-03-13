@@ -1,9 +1,10 @@
 Photo.destroy_all
 ActiveRecord::Base.connection.execute("ALTER SEQUENCE PHOTOS_id_seq RESTART WITH 1")
 
-AdminUser.create!(email: 'ferleiva@instapets.com', password: '123456')
+AdminUser.create!(email: 'admin@instapets.com', password: '123456')
 User.create!(name: 'Katto', email: 'katto@meow.com', password: '123456')
 User.create!(name: 'Mahia', email: 'mahia@guau.com', password: '123456')
+User.create!(name: 'Lola', email: 'lola@guau.com', password: '123456')
 
 Photo.create!(
   name: 'Fish', 
