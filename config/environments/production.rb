@@ -74,7 +74,7 @@ Rails.application.configure do
 
   config.action_mailer.default_url_options = { host: 'instapetsapp.herokuapp.com', port: 587 }
   config.action_mailer.delivery_method = :smtp
-  consfg.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = false
 
   # Don't log any deprecations.
   config.active_support.report_deprecations = false
