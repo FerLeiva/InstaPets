@@ -16,14 +16,14 @@ Photo.create!(
   name: 'Beautyflies', 
   url: 'https://static.depositphotos.com/storage/file_upload/file_60947eef99645aaba70466f81fdf3953.jpg?1586942770',
   description: 'Cute bugs', 
-  license: 'copyright'
+  license: 'copyright',
   visibility: 'pub',
   user_id: 1 )
 Photo.create!(
   name: 'Abstract', 
   url: 'https://st3.depositphotos.com/4758989/14194/v/450/depositphotos_141944676-stock-illustration-storm-in-a-light-bulb.jpg', 
   description: 'This is not an animal', 
-  license: 'creative_commons'
+  license: 'creative_commons',
   visibility: 'pub',
   user_id: 1 )
 Photo.create!(
@@ -37,7 +37,7 @@ Photo.create!(
   name: 'WTF', 
   url: 'https://st3.depositphotos.com/7477192/32961/i/950/depositphotos_329614052-stock-photo-lycan-werewolf-isolated-on-white.jpg', 
   description: 'Big foot spotted near Buenos Aires', 
-  license: 'creative_commons'
+  license: 'creative_commons',
   visibility: 'priv',
   user_id: 1 )
 Photo.create!(
