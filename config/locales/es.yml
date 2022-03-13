@@ -11,3 +11,10 @@ es:
     show:
       description: 'Sobre esto'
       user: 'Autor'
+
+  welcome:
+    index:
+      title: 'Bienvenido a InstaPets'
+      description: 'Aplicación de imagenes de mascotas utilizando Ruby on Rails'
+      subtitle: 'Últimas fotos subidas'
+      subtitle2: '¡Se el primero un subir una foto!'

@@ -42,3 +42,10 @@ en:
     show:
       description: 'About this'
       user: 'Author'
+
+  welcome:
+    index:
+      title: 'Welcome to InstaPets'
+      description: 'Pet images App using Ruby on Rails'
+      subtitle: 'Latest uploaded photos'
+      subtitle2: 'Be the first one to submit a pic!'
