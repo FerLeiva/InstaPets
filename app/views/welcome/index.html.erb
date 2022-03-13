@@ -1,9 +1,14 @@
-<h1>Welcome to InstaPets</h1>
-<p>Pet images App using Ruby on Rails</p>
+<div class="px-3 py-2 my-4 text-center">
+	<h1>Welcome to InstaPets</h1>
+	<p>Pet images App using Ruby on Rails</p>
+</div>
 
-<% if @photos.any? %>
-	<h2>Latest uploaded photos</h2>
-	<%= render partial: 'photos/photos_loop', object: @photos %>
-<% else %>
-	<p>Be the first one to submit a pic!</p>
-<% end %>
+<div class="px-3 py-2 my-4 text-center">
+	<% if @photos.any? %>
+		<h2>Latest uploaded photos</h2>
+		<br>
+		<%= render partial: 'photos/photos_loop', object: @photos %>
+	<% else %>
+		<p>Be the first one to submit a pic!</p>
+	<% end %>
+</div>
