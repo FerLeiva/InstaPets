@@ -10,34 +10,26 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
- *= require_self
 
  */
 
 // Application's got SASS!
-@import "active_admin/mixins";
-@import "active_admin/base";
 
-.navbar {
-        margin-bottom: 0;
-        background: teal;
-}
-body {
-        background: #fafafa;
-        color: white;
-        font-family: 'Merriweather', sans-serif;
-}
-h1,
-h2 {
-        font-weight: bold;
-}
-p {
-        font-size: 16px;
-        color: black;
+@import "bootstrap";
+
+.link-to-text-color {
+    color: white;
 }
 
-.link {
-        color: black;
+
+a {
+    text-decoration: none;
+    padding: 0.5rem
 }
 
+.container-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+}

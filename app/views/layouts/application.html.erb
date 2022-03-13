@@ -20,27 +20,31 @@
   <body>
     <section class="container">
       <section>
-      <nav>
-        <%= link_to 'Home', welcome_home_path %>
-         <%= link_to 'Photo list', photos_path %>
+     <nav class="navbar navbar-dark bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="http://localhost:3000/welcome/index">InstaPets</a>
+      <div class="nav">
+        <%= link_to 'Home', welcome_home_path, class: 'link-to-text-color' %>
+        <%= link_to 'Photo list', photos_path, class: 'link-to-text-color' %>
         <% if user_signed_in? %>
-          <%= link_to 'My photos', my_photos_path %>
-          <%= link_to 'Upload a photo', new_photo_path %>
-          <%= button_to 'Logout', destroy_user_session_path, :method => :delete %>
-          <% else %>
-          <%= link_to 'Login', new_user_session_path %>
+        <%= link_to 'My photos', my_photos_path, class: 'link-to-text-color' %>
+       <%= link_to 'Upload a photo', new_photo_path, class: 'link-to-text-color' %>
+       <%= link_to 'Logout', destroy_user_session_path, class: 'link-to-text-color', :method => :delete %>
+        <% else %>
+       <%= link_to 'Login', new_user_session_path, class: 'link-to-text-color' %>
         <%end%>
-      </nav>
+      </div>
+  </div>
+</nav>
+     
     </section>
-
-    <hr>
     
     <section>
       <% if flash[:notice] %>
-        <p class="notice"> <%= notice %> </p>
+        <p class="alert alert-info"> <%= notice %> </p>
       <%end%>
-      <% if flash[:notice] %>
-        <p class="alert"> <%= alert %> </p>
+      <% if flash[:alert] %>
+        <p class="alert alert-danger"> <%= alert %> </p>
       <%end%>
       <%= yield %>
     </section>

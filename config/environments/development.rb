@@ -41,6 +41,11 @@ Rails.application.configure do
 
 config.action_mailer.default_url_options = { :host => "localhost:3000" }
 
+  config.action_mailer.asset_host = "http://localhost:3000" # for image URLs in HTML email
+
+  # Allow generating absolute urls with routing url helpers.
+  Rails.application.routes.default_url_options[:host] = 'localhost:3000'
+
   config.action_mailer.raise_delivery_errors = false
 
   config.action_mailer.perform_caching = false
