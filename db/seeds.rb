@@ -23,7 +23,7 @@ Photo.create!(
   name: 'Abstract', 
   url: 'https://st3.depositphotos.com/4758989/14194/v/450/depositphotos_141944676-stock-illustration-storm-in-a-light-bulb.jpg', 
   description: 'This is not an animal', 
-  license: 'copyleft'
+  license: 'creative_commons'
   visibility: 'pub',
   user_id: 1 )
 Photo.create!(
