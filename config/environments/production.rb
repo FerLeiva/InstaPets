@@ -72,10 +72,7 @@ Rails.application.configure do
   # the I18n.default_locale when a translation cannot be found).
   config.i18n.fallbacks = true
 
-  Rails.application.routes.default_url_options[:host] = 'https://instapetsapp.herokuapp.com'
-
-
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  Rails.application.routes.default_url_options[:host] = 'instapetsapp.herokuapp.com'
 
   # Don't log any deprecations.
   config.active_support.report_deprecations = false
