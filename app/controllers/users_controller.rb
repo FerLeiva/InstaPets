@@ -3,6 +3,7 @@ class UsersController < ApplicationController
 
 	def login
 		@user = User.new
+		redirect_to :root, notice: "Logged in successfully"
 	end
 
 	def new_session
